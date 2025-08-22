@@ -178,10 +178,24 @@ export default function QAChecker() {
               <div>
                 <label className="text-sm font-medium text-gray-700">Google API Key</label>
                 <Input type="password" value={apiKey} onChange={e => setApiKey(e.target.value)} placeholder="APIキーを入力" />
+                <p className="text-xs text-gray-500 mt-1">
+                  APIキーは
+                  <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                    Google Cloud Console
+                  </a>
+                  で確認できます。
+                </p>
               </div>
               <div>
                 <label className="text-sm font-medium text-gray-700">検索エンジンID (cx)</label>
                 <Input type="password" value={cx} onChange={e => setCx(e.target.value)} placeholder="cx値を入力" />
+                <p className="text-xs text-gray-500 mt-1">
+                  検索エンジンIDは
+                  <a href="https://cse.google.com/all" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                    Programmable Search Engine
+                  </a>
+                  で確認できます。
+                </p>
               </div>
             </div>
             <div>
